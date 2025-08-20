@@ -1,15 +1,15 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Load example dataset
-tips = sns.load_dataset("tips")
+# Generate some sample data (e.g., correlation matrix)
+data = np.random.rand(10, 10)
 
-# Set figure size in inches to get 512x512 pixels (dpi=100 => 5.12 inches)
-plt.figure(figsize=(5.12, 5.12), dpi=100)
+plt.figure(figsize=(5.12, 5.12), dpi=100)  # 512x512 pixels
 
-# Create a simple Seaborn scatter plot
-sns.scatterplot(data=tips, x="total_bill", y="tip", hue="time")
+# Create heatmap
+sns.heatmap(data, cmap='viridis')
 
-# Save the figure as PNG with exact size
+# Save figure as 512x512 PNG
 plt.savefig("chart.png", dpi=100)
 plt.close()
