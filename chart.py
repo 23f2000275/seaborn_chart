@@ -34,7 +34,7 @@ data = data.clip(lower=0)
 corr = data.corr()
 
 # Plot the heatmap
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(5.12, 5.12), dpi=100)
 sns.set(style="white")
 
 heatmap = sns.heatmap(
